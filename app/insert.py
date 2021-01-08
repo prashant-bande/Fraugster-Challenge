@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 # Add your code here!
 
 # Import the libraries
@@ -10,7 +9,7 @@ class DBConnect:
     def __init__(self):
         # Connect to postgres database. Make sure to replace the desire 'host' parameter value
         try:
-            self.conn = psycopg2.connect("dbname='accounts' user='sqluser' host='172.31.8.214' password='sqlpass' port='5432'")
+            self.conn = psycopg2.connect("dbname='accounts' user='sqluser' host='db' password='sqlpass' port='5432'")
             self.conn.autocommit = True
             self.cursor = self.conn.cursor()
             print("Connected Successfully")
